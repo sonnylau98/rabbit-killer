@@ -17,12 +17,12 @@ bool playerMovingLeft = false;
 
 void init()
 {
-  skyTexture.loadFromFile("./image/bg.jpg");
+  skyTexture.loadFromFile("../img/bg.jpg");
   skySprite.setTexture(skyTexture);
   skySprite.setPosition(0, 0);
   skySprite.setScale(1.0f, 1.0f);
 
-  hero.init("./image/panda.jpeg", sf::Vector2f(viewSize.x * 0.25f, viewSize.y * 0.25f), 200);
+  hero.init("../img/panda.jpeg", sf::Vector2f(viewSize.x * 0.25f, viewSize.y * 0.25f), 200);
 }
 
 void updateInput()
