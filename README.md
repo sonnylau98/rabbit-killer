@@ -1,2 +1,2 @@
 # curly-journey
-A game that is developing by me.
+A game is being developed by me.
