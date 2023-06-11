@@ -7,23 +7,29 @@ Hero::Hero() {
 Hero::~Hero() {
 
 }
-
-void Hero::init(std::vector<std::string> textureNames, sf::Vector2f position, float mass) {
+void Hero::init(std::vector<std::string> textureNamesRight, std::vector<std::string> textureNamesLeft, sf::Vector2f position, float mass) {
   m_position = position;
   m_velocity = sf::Vector2f(0.0f, 0.0f);
 
   m_mass = mass;
   m_grounded = false;
 
-  for (const auto& textureName : textureNames) {
+  for (const auto& textureName : textureNamesRight) {
     sf::Texture texture;
     texture.loadFromFile(textureName.c_str());
-    m_textures.push_back(texture);
+    m_texturesRight.push_back(texture);
   }
 
-  m_sprite.setTexture(m_textures[0]);
+  for (const auto& textureName : textureNamesLeft) {
+    sf::Texture texture;
+    texture.loadFromFile(textureName.c_str());
+    m_texturesLeft.push_back(texture);
+  }
+
+  m_sprite.setTexture(m_texturesRight[0]);
   m_sprite.setPosition(m_position);
-  m_sprite.setOrigin(m_textures[0].getSize().x / 2, m_textures[0].getSize().y / 2);
+  m_sprite.setOrigin(m_texturesRight[0].getSize().x / 2, m_texturesRight[0].getSize().y / 2);
+
 }
 
 void Hero::update(float dt) {
@@ -38,16 +44,21 @@ void Hero::update(float dt) {
     m_velocity.y = 0.0f;
   }
 
-  //m_currentTextureIndex = (m_currentTextureIndex + 1) % m_textures.size();
-  //m_sprite.setTexture(m_textures[m_currentTextureIndex]);
-
-  //
-    m_textureChangeTimer += dt;
+  m_textureChangeTimer += dt;
   if (m_textureChangeTimer >= m_textureChangeInterval) {
-    m_currentTextureIndex = (m_currentTextureIndex + 1) % m_textures.size();
-    m_sprite.setTexture(m_textures[m_currentTextureIndex]);
-    m_textureChangeTimer = 0.0f; // Reset the timer
+    m_currentTextureIndex = (m_currentTextureIndex + 1) % m_texturesRight.size();
+
+    if (m_facingRight) {
+      m_sprite.setTexture(m_texturesRight[m_currentTextureIndex]);
+    }
+    else {
+      m_sprite.setTexture(m_texturesLeft[m_currentTextureIndex]);
+    }
+
+
+    m_textureChangeTimer = 0.0f;
   }
+
 }
 
 
@@ -64,6 +75,12 @@ void Hero::down(float velocity) {
 
 void Hero::move(float velocity) {
     m_velocity.x = velocity;
+
+    if (velocity > 0) {
+        m_facingRight = true;
+    } else if (velocity < 0) {
+        m_facingRight = false;
+    }
 }
 
 void Hero::applyGravity(float dt) {

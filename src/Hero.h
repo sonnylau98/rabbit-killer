@@ -5,7 +5,7 @@ class Hero{
   Hero();
   ~Hero();
 
-  void init(std::vector<std::string> textureNames, sf::Vector2f position, float mass);
+  void init(std::vector<std::string> textureNamesRight, std::vector<std::string> textureNamesLeft, sf::Vector2f position, float mass);
 
   void update(float dt);
   void jump(float velocity);
@@ -13,7 +13,6 @@ class Hero{
   void down(float velocity);
 
   void applyGravity(float dt);
-  void applyFraction(float dt);
 
   sf::Sprite getSprite();
 
@@ -28,9 +27,13 @@ class Hero{
 
   bool m_grounded;
 
-  std::vector<sf::Texture> m_textures;
+  std::vector<sf::Texture> m_texturesRight;
+  std::vector<sf::Texture> m_texturesLeft;
+
   int m_currentTextureIndex = 0;
 
   float m_textureChangeTimer = 0.0f;
   const float m_textureChangeInterval = 0.025f;
+
+  bool m_facingRight = false;
 };
