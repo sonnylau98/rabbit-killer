@@ -1,3 +1,87 @@
+std::vector<std::string> attackTexturesRight = {
+
+      "../img/rabbit/atk_Right/1.png",
+    "../img/rabbit/atk_Right/2.png",
+    "../img/rabbit/atk_Right/3.png",
+    "../img/rabbit/atk_Right/4.png",
+    "../img/rabbit/atk_Right/5.png",
+    "../img/rabbit/atk_Right/6.png",
+    "../img/rabbit/atk_Right/7.png",
+    "../img/rabbit/atk_Right/8.png",
+    "../img/rabbit/atk_Right/9.png",
+    "../img/rabbit/atk_Right/10.png",
+    "../img/rabbit/atk_Right/11.png",
+    "../img/rabbit/atk_Right/12.png",
+    "../img/rabbit/atk_Right/13.png",
+    "../img/rabbit/atk_Right/14.png",
+    "../img/rabbit/atk_Right/15.png",
+    "../img/rabbit/atk_Right/16.png",
+    "../img/rabbit/atk_Right/17.png",
+    "../img/rabbit/atk_Right/18.png",
+    "../img/rabbit/atk_Right/19.png",
+    "../img/rabbit/atk_Right/20.png",
+    "../img/rabbit/atk_Right/21.png",
+    "../img/rabbit/atk_Right/22.png",
+    "../img/rabbit/atk_Right/23.png",
+    "../img/rabbit/atk_Right/24.png",
+    "../img/rabbit/atk_Right/25.png",
+    "../img/rabbit/atk_Right/26.png",
+    "../img/rabbit/atk_Right/27.png",
+    "../img/rabbit/atk_Right/28.png",
+    "../img/rabbit/atk_Right/29.png",
+    "../img/rabbit/atk_Right/30.png",
+    "../img/rabbit/atk_Right/31.png",
+    "../img/rabbit/atk_Right/32.png",
+    "../img/rabbit/atk_Right/33.png",
+    "../img/rabbit/atk_Right/34.png",
+    "../img/rabbit/atk_Right/35.png",
+    "../img/rabbit/atk_Right/36.png",
+    "../img/rabbit/atk_Right/37.png",
+    "../img/rabbit/atk_Right/38.png"
+};
+
+std::vector<std::string> attackTexturesLeft = {
+
+    "../img/rabbit/atk_Left/1.png",
+    "../img/rabbit/atk_Left/2.png",
+    "../img/rabbit/atk_Left/3.png",
+    "../img/rabbit/atk_Left/4.png",
+    "../img/rabbit/atk_Left/5.png",
+    "../img/rabbit/atk_Left/6.png",
+    "../img/rabbit/atk_Left/7.png",
+    "../img/rabbit/atk_Left/8.png",
+    "../img/rabbit/atk_Left/9.png",
+    "../img/rabbit/atk_Left/10.png",
+    "../img/rabbit/atk_Left/11.png",
+    "../img/rabbit/atk_Left/12.png",
+    "../img/rabbit/atk_Left/13.png",
+    "../img/rabbit/atk_Left/14.png",
+    "../img/rabbit/atk_Left/15.png",
+    "../img/rabbit/atk_Left/16.png",
+    "../img/rabbit/atk_Left/17.png",
+    "../img/rabbit/atk_Left/18.png",
+    "../img/rabbit/atk_Left/19.png",
+    "../img/rabbit/atk_Left/20.png",
+    "../img/rabbit/atk_Left/21.png",
+    "../img/rabbit/atk_Left/22.png",
+    "../img/rabbit/atk_Left/23.png",
+    "../img/rabbit/atk_Left/24.png",
+    "../img/rabbit/atk_Left/25.png",
+    "../img/rabbit/atk_Left/26.png",
+    "../img/rabbit/atk_Left/27.png",
+    "../img/rabbit/atk_Left/28.png",
+    "../img/rabbit/atk_Left/29.png",
+    "../img/rabbit/atk_Left/30.png",
+    "../img/rabbit/atk_Left/31.png",
+    "../img/rabbit/atk_Left/32.png",
+    "../img/rabbit/atk_Left/33.png",
+    "../img/rabbit/atk_Left/34.png",
+    "../img/rabbit/atk_Left/35.png",
+    "../img/rabbit/atk_Left/36.png",
+    "../img/rabbit/atk_Left/37.png",
+    "../img/rabbit/atk_Left/38.png"
+};
+
 std::vector<std::string> heroTexturesRight = {
     "../img/rabbit/Right/1.png",
     "../img/rabbit/Right/2.png",
@@ -52,4 +136,4 @@ std::vector<std::string> heroTexturesLeft = {
     "../img/rabbit/Left/24.png"
 };
 
-std::string backgroundTexture = "../img/bg.jpg";
+std::string backgroundTexture = "../img/bg.png";

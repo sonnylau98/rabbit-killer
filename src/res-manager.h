@@ -10,4 +10,4 @@ public:
     static std::vector<sf::Texture> loadTextures(const std::vector<std::string>& texturePaths);
 };
 
-#endif // RES_MANAGER_H
+#endif
