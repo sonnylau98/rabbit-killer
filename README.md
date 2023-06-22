@@ -1,6 +1,11 @@
 # Introduction
 A game is being developed by me.
 
+# Prerequisites
+root:
+
+`apt install libsfml-dev -y`
+
 # Compilation
 Get into repository's dir, type this in your shell:
 
